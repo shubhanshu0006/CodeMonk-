@@ -16,7 +16,7 @@ PostgreSQL (Relational Database)
 Clone the Repository
 
 bash
-git clone https://github.com/your-username/your-repository.git
+git clone [https://github.com/your-username/your-repository.git](https://github.com/shubhanshu0006/CodeMonk-.git)
 cd your-repository
 
 2. Create a Virtual Environment
