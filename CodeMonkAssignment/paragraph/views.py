@@ -35,7 +35,7 @@ class SearchParagraphsView(APIView):
         if not word_to_search:
             return Response({'error': 'Word parameter is missing'}, status=status.HTTP_400_BAD_REQUEST)
 
-        # paragraphs = Paragraph.objects.annotate(word_count=Count('words')).filter(words__content=word_to_search).order_by('-word_count')[:10]
+        
         paragraphs = Paragraph.objects.annotate(word_count=Count('words')).filter(words__content__iexact=word_to_search).order_by('-word_count')[:10]
         if not paragraphs:
             return Response({'message': 'Word not found in any paragraphs'})
